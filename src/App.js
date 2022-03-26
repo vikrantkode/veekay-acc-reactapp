@@ -1,43 +1,26 @@
-import "./App.css";
-import logo from "./logo.png";
+import {Routes, Route} from "react-router-dom"
+import {Homepage} from "./pages/Homepage/Homepage"
+import { ProductListing } from "./pages/ProductListing/ProductListing"
+import { WishlistPage } from "./pages/WishlistPage/WishlistPage"
+import { CartPage } from "./pages/CartPage/CartPage"
+import { LoginPage } from "./pages/LoginPage/LoginPage"
+import { SignupPage } from "./pages/SignupPage/SignupPage"
+import Mockman from "mockman-js"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
-    </div>
-  );
+ return ( 
+  <div className = "App" >
+    <Routes>
+      <Route path = "/"element = {<Homepage/>}/> 
+      <Route path = "/mock" element = {<Mockman />}/> 
+      <Route path = "/product"element = {<ProductListing />}/>
+      <Route path = "/wishlist" element = {<WishlistPage />}/> 
+      <Route path = "/cartpage" element = {<CartPage />}/> 
+      <Route path = "/loginpage" element = {<LoginPage />}/>
+      {/* <Route path = "/signuppage" element = {<SignupPage />}/> */}
+     </Routes> 
+  </div>
+ )
 }
 
 export default App;
