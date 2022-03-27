@@ -1,0 +1,77 @@
+.container_home {
+  display: grid;
+  gap: 20px;
+
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    "head    head    head    head    head    head    head    head  "
+    "......  section section section section section section section"
+    "......  main    main    main    main    main    main    ......"
+    "......  main    main    main    main    main    main    ......"
+    "......  main    main    main    main    main    main    ......"
+    "......  main    main    main    main    main    main    ......"
+    "footer  footer  footer  footer  footer  footer  footer  footer";
+}
+
+section {
+  grid-area: section;
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.text_overlay {
+  width: auto;
+}
+
+.card_container_homepage {
+  width: 13rem;
+}
+
+.hero_img_width {
+  width: 100%;
+}
+
+.hero_img_tagline {
+  color: white;
+}
+.hero_image {
+  grid-area: main;
+  position: relative;
+}
+
+.hero_image > img {
+  filter: grayscale(30%);
+  width: 100%;
+}
+
+.hero_image_content {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.card_btm {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.card_wrapper_homepage {
+  width: 13rem;
+  align-items: center;
+}
+
+.card_wrapper_homepage > img {
+  width: 100%;
+}
+
+.card_btm_left,
+.card_btm_right {
+  background-color: var(--card-bg-color);
+  width: 50%;
+  display: flex;
+}

@@ -1,0 +1,37 @@
+:root {
+  --white-color: white;
+}
+.header {
+  grid-area: head;
+  padding: 8px;
+}
+
+.header_name {
+  display: flex;
+  align-items: center;
+}
+
+.header_name > a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.input_box {
+  margin-left: 10rem;
+}
+
+.icon_badge {
+  font-size: small;
+  z-index: 0;
+  margin-left: 1rem;
+}
+.icon,
+.btn-primary:hover {
+  color: var(--white-color);
+}
+
+.btn-primary {
+  margin: 0;
+  background-color: var(--white-color);
+  color: var(--primary-color);
+}
