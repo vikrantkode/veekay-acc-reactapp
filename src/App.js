@@ -1,10 +1,5 @@
 import {Routes, Route} from "react-router-dom"
-import {Homepage} from "./pages/Homepage/Homepage"
-import { ProductListing } from "./pages/ProductListing/ProductListing"
-import { WishlistPage } from "./pages/WishlistPage/WishlistPage"
-import { CartPage } from "./pages/CartPage/CartPage"
-import { LoginPage } from "./pages/LoginPage/LoginPage"
-import { SignupPage } from "./pages/SignupPage/SignupPage"
+import { Homepage, ProductListing, WishlistPage, CartPage, LoginPage } from "./pages/pages"
 import Mockman from "mockman-js"
 
 function App() {
@@ -17,7 +12,6 @@ function App() {
       <Route path = "/wishlist" element = {<WishlistPage />}/> 
       <Route path = "/cartpage" element = {<CartPage />}/> 
       <Route path = "/loginpage" element = {<LoginPage />}/>
-      {/* <Route path = "/signuppage" element = {<SignupPage />}/> */}
      </Routes> 
   </div>
  )

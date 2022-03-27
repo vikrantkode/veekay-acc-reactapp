@@ -17,7 +17,6 @@ function Nav() {
         <div className="badge_container">
           <div className="icon_badge">
             <Link to="/cartpage">
-              {" "}
               <span className="material-icons-outlined icon">
                 shopping_cart
               </span>
@@ -26,7 +25,6 @@ function Nav() {
           </div>
           <div className="icon_badge">
             <Link to="/wishlist">
-              {" "}
               <span className="material-icons-outlined icon">
                 favorite_border
               </span>
