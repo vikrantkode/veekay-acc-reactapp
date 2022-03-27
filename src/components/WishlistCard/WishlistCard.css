@@ -1,0 +1,45 @@
+.container {
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+        "head     head     head     head       head     head "
+        "main     main     main     main       main     main "
+        "main     main     main     main       main     main "
+        "main     main     main     main       main     main "
+        "main     main     main     main       main     main "
+        "footer   footer  footer   footer     footer   footer";
+}
+
+/* :root{
+    --wishlist-icon-color: red ;
+} */
+.main_wishlist_container{
+    grid-area: main;
+}
+
+.main_card_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.wishlist_icon{
+    color: var(--wishlist-icon-color);    
+}
+
+.wishlist_btn{
+    padding: 0;
+} 
+
+.dismiss:hover{
+    background-color: var(--btn-text-color);
+}
