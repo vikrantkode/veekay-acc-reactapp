@@ -14,10 +14,10 @@ const Homepage = () => {
     (async function getCategoryFunction() {
       try {
         const resp = await axios.get("api/categories");
-        console.log(resp.data.categories);
         setHomepageData(resp.data.categories);
       } catch (err) {
         console.error(err);
+        setHomepageData(`Error Occured`);
       }
     })();
   }, []);
@@ -40,9 +40,7 @@ const Homepage = () => {
         })}
       </section>
       <div className="hero_image ">
-        {/* <a href="/Pages/Product/product.html"> */}
         <img className="hero_img_width" src={heroImg} alt="carosol" />
-        {/* </a> */}
         <div className="hero_image_content">
           <h2 className="hero_img_tagline">Vee-Kay Accessories</h2>
           <p className="hero_img_tagline">
@@ -50,7 +48,6 @@ const Homepage = () => {
             varieties
           </p>
           <Link to="/product">
-            {" "}
             <button className="btn btn-default">View Products</button>
           </Link>
         </div>
