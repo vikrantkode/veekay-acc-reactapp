@@ -23,7 +23,7 @@ const ProductListing = () => {
         alert(`Error from Server , ${err}`);
       }
     })();
-  });
+  },[]);
 
   let sortByPriceArr = products;
   sortByPriceArr = sortPriceFunction(products, sortPrice);

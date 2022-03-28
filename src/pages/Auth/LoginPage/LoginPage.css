@@ -1,3 +1,21 @@
+.container_login {
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "head   head     head"
+        "....   main     ...."
+        "....   main     ...."
+        "....   main     ...."
+        "....   main     ...."
+        "footer footer  footer";
+}
+
+
+
+
+
 .form_container{
     border: 1px solid;
     box-shadow: 3px 0px 9px 0px;
