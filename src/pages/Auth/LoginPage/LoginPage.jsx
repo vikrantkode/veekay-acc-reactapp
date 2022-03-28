@@ -20,6 +20,7 @@ const LoginPage = () => {
     try{
       const password = pass;
       const resp = await axios.post("/api/auth/login",{ email, password})
+      
       localStorage.setItem("token",resp.data.encodedToken)
       
       dispatch({ type: "SUCCESS", payload:resp.data.encodedToken})

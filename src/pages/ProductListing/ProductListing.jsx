@@ -15,15 +15,16 @@ const ProductListing = () => {
   } = useFilter();
 
   useEffect(() => {
-    (async function getProductFunction() {
+    (async ()=> {
       try {
         const resp = await axios.get("api/products");
-        dispatch({ type: "PROD_TO_LOAD", payload: resp.data.products });
+        
+        dispatch({ type: "PROD_TO_LOAD", payload: resp.data.products }); 
       } catch (err) {
         alert(`Error from Server , ${err}`);
       }
     })();
-  },[]);
+  },[dispatch]);
 
   let sortByPriceArr = products;
   sortByPriceArr = sortPriceFunction(products, sortPrice);
