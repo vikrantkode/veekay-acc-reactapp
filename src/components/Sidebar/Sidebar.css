@@ -1,0 +1,37 @@
+.sidebar_container {
+    grid-area: sidebar;
+    margin-left: 1rem;
+}
+
+.sidebar_box{
+    margin-bottom: 1rem;
+}
+.space_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter{
+    cursor: pointer;
+    font-size: small;
+}
+
+.input_range{
+    cursor: pointer;
+    width: 100%;
+}
+
+.normal_list{
+    padding: 0;
+    margin-bottom: 0.3rem;
+}
+
+.checkbox_list{
+    margin-right: 1rem;   
+}
+
+.large_heading{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

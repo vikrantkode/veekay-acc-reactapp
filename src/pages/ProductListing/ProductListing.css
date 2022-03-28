@@ -1,0 +1,21 @@
+.container_product {
+  display: grid;
+  gap: 20px;
+
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "head      head    head    head    head    head "
+    "sidebar   main    main    main    main    main "
+    "sidebar   main    main    main    main    main "
+    "sidebar   main    main    main    main    main "
+    "sidebar   main    main    main    main    main "
+    "footer   footer  footer  footer  footer  footer";
+}
+
+.largest_header {
+  margin-left: 1rem;
+}
+
+.main_container_product {
+  grid-area: main;
+}

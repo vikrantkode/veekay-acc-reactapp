@@ -1,0 +1,87 @@
+.container_cart {
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "head   head     head     head   head"
+        "....   main     main     main   ...."
+        "....   main     main     main   ...."
+        "....   main     main     main   ...."
+        "....   main     main     main   ...."
+        "footer footer  footer   footer  footer";
+}
+
+.main_container{
+    grid-area: main;
+}
+
+.btn_container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* .btn{
+    width: 100%;
+} */
+
+.quantity,
+.quantity_increase,
+.quantity_decrease{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity_box{
+    width: 2rem;
+    height: 1.6rem;
+    padding: 0.6rem;
+}
+
+.quantity_increase,
+.quantity_decrease{
+    font-size: 1rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    padding: 0.2rem;
+    margin: 1rem;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.cart_quantity{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.card_checkout{
+    flex-direction: column;
+    padding: 1rem;
+    height: fit-content;
+}
+
+.card_container{
+    width: 18rem;
+}
+
+.normal_list{
+    display: flex;
+    /* justify-content: space-between; */
+    padding-top: 1rem;
+}
+.large_heading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_card_container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* .main_container > h1{
+    text-align: center;
+} */
