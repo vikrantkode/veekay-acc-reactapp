@@ -10,7 +10,7 @@ function Nav() {
   return (
     <div className="header">
       <div className="header_name">
-       <Link to="/home" ><h3> Vee-Kay Accessories </h3></Link>
+       <Link to="/" ><h3> Vee-Kay Accessories </h3></Link>
         <input className="input_box" type="text" placeholder="Enter text.." />
       </div>
       <div className="header_subcontents">
