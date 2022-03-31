@@ -3,10 +3,10 @@ import { authReducerFunction } from "../reducer/authReducerFunction"
 
 
 const AuthContext = createContext()
-
+const tokenDetails = localStorage.getItem("token")
 const AuthProvider = ({children}) => {
 const[state,dispatch] = useReducer(authReducerFunction,{
-    encodedToken:"",
+    encodedToken:tokenDetails,
 })
 
 return(
