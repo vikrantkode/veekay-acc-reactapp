@@ -2,10 +2,12 @@ import React from "react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/Cart-Context";
+import { useWishlist } from "../../context/Wishlist-Context";
 
 function Nav() {
 
   const{itemsInCart} = useCart();
+  const {itemsInWishlist} = useWishlist();
 
   return (
     <div className="header">
@@ -33,7 +35,7 @@ function Nav() {
                 favorite_border
               </span>
             </Link>
-            <span className="badge_numbered">1</span>
+            <span className="badge_numbered">{itemsInWishlist.length}</span>
           </div>
         </div>
       </div>
