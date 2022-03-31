@@ -1,12 +1,16 @@
 import React from "react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
+import { useCart } from "../../context/Cart-Context";
 
 function Nav() {
+
+  const{itemsInCart} = useCart();
+
   return (
     <div className="header">
       <div className="header_name">
-        <h3> Vee-Kay Accessories </h3>
+       <Link to="/home" ><h3> Vee-Kay Accessories </h3></Link>
         <input className="input_box" type="text" placeholder="Enter text.." />
       </div>
       <div className="header_subcontents">
@@ -21,7 +25,7 @@ function Nav() {
                 shopping_cart
               </span>
             </Link>
-            <span className="badge_numbered">1</span>
+            <span className="badge_numbered">{itemsInCart.length}</span>
           </div>
           <div className="icon_badge">
             <Link to="/wishlist">

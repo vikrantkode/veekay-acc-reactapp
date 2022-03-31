@@ -1,0 +1,34 @@
+.container_cart {
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "head   head     head     head   head"
+        "....   main     main     main   ...."
+        "....   main     main     main   ...."
+        "....   main     main     main   ...."
+        "....   main     main     main   ...."
+        "footer footer  footer   footer  footer";
+}
+
+.main_container_cart{
+    grid-area: main;
+}
+
+.btn_container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header_position{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.cart_price{
+    display: flex;
+}

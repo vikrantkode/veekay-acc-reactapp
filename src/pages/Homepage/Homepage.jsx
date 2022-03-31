@@ -62,11 +62,9 @@ const Homepage = () => {
                 Check out for best mens accessories collection to style up this
                 deason.
               </p>
-              <a href="/Pages/Product/product.html">
                 <Link to="/product">
                   <button className="btn btn-default">Explore Now</button>
-                </Link>
-              </a>
+                </Link>              
             </div>
           </div>
           <div className="card_btm_right">
@@ -79,11 +77,9 @@ const Homepage = () => {
                 Check out for best mens accessories collection to style up this
                 deason.
               </p>
-              <a href="/Pages/Product/product.html">
                 <Link to="/product">
                   <button className="btn btn-default">Explore Now</button>
                 </Link>
-              </a>
             </div>
           </div>
         </div>

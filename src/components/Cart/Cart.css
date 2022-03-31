@@ -1,20 +1,4 @@
-.container_cart {
-    display: grid;
-    gap: 20px;
 
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas:
-        "head   head     head     head   head"
-        "....   main     main     main   ...."
-        "....   main     main     main   ...."
-        "....   main     main     main   ...."
-        "....   main     main     main   ...."
-        "footer footer  footer   footer  footer";
-}
-
-.main_container{
-    grid-area: main;
-}
 
 .btn_container{
     display: flex;
@@ -66,9 +50,9 @@
     width: 18rem;
 }
 
-.normal_list{
+.normal_list_cart{
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     padding-top: 1rem;
 }
 .large_heading{
