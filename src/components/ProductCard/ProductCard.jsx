@@ -1,35 +1,20 @@
 import React from "react";
 import "./ProductCard.css";
 import {useCart} from "../../context/Cart-Context"
-import axios from "axios";
 import { useAuth } from "../../context/Auth-Context";
 import { Link, useNavigate } from "react-router-dom";
+import { useWishlist, addToCartClickHandler, addToWishlistHandler } from "../../context/Wishlist-Context";
+
 
 
 function ProductCard({ item }) {
 
   const {itemsInCart,setItemsInCart} = useCart();
+  const {itemsInWishlist, setItemsInWishlist} = useWishlist();
   const {state:{encodedToken}} = useAuth();
   const navigate = useNavigate();
 
-    const addToCartClickHandler = async (product) => {
-      console.log("clicked here",product)
     
-      if(encodedToken){
-        try {
-          const cartItems = await axios.post( `/api/user/cart`, {product} ,
-            { headers: { authorization: encodedToken } }
-          );
-          setItemsInCart(cartItems.data.cart)
-        } catch (err) {
-          console.log(err)
-        }  
-      } else {
-        navigate("/loginpage")
-      }
-  };
-
-
   return (
     <div className="card_container">
       <div className="card_wrapper">
@@ -51,8 +36,13 @@ function ProductCard({ item }) {
       <div className="btn_container">
         {itemsInCart.some((e)=>e._id === item._id) ? 
             <Link to= "/cartpage"> <button className="btn btn-success">Go To Cart</button> </Link> :  <button className="btn btn-success" 
-                onClick={()=>addToCartClickHandler(item)}>Add To Cart</button>}
-        <button className="btn btn-error">Wishlist</button>
+                onClick={()=>addToCartClickHandler(item , setItemsInCart, encodedToken, navigate)}>Add To Cart</button>}
+
+        {itemsInWishlist.some((e)=>e._id === item._id)?
+            <Link to="/wishlist">
+              <button className="btn btn-error">Go To Wishlist</button>
+              </Link> : 
+            <button className="btn btn-error" onClick={()=>addToWishlistHandler(item,setItemsInWishlist,encodedToken,navigate)}>Add To Wishlist</button>}         
       </div>
     </div>
 
