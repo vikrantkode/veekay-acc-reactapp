@@ -14,35 +14,7 @@ function ProductCard({ item }) {
   const {state:{encodedToken}} = useAuth();
   const navigate = useNavigate();
 
-    // const addToCartClickHandler = async (product) => {
-    //   if(encodedToken){
-    //     try {
-    //       const cartItems = await axios.post( `/api/user/cart`, {product} ,
-    //         { headers: { authorization: encodedToken } }
-    //       );
-    //       setItemsInCart(cartItems.data.cart)
-    //     } catch (err) {
-    //       alert("error from server", err)
-    //     }  
-    //   } else {
-    //     navigate("/loginpage")
-    //   }
-    // };
-
-    // const addToWishlistHandler = async (product) => {
-    //   if(encodedToken){
-    //     try {
-    //       const resp = await axios.post(`/api/user/wishlist`,{product},
-    //       { headers: { authorization: encodedToken }});
-    //       setItemsInWishlist(resp.data.wishlist);
-    //     }catch(err){
-    //       alert("error from server", err)
-    //     }
-    //   } else {
-    //     navigate("/loginpage")
-    //   }
-    // }
-  
+    
   return (
     <div className="card_container">
       <div className="card_wrapper">
