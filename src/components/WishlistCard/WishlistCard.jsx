@@ -4,12 +4,29 @@ import { addToCartClickHandler } from "../../context/Wishlist-Context";
 import { useCart } from '../../context/Cart-Context';
 import { useAuth } from '../../context/Auth-Context';
 import { useNavigate } from 'react-router-dom';
-import {Link} from "react-router-dom"
+import axios from "axios"
 
-function WishlistCard({item, removeFromWishlistHandler}) {
+function WishlistCard({item, removeFromWishlistHandler }) {
     const {itemsInCart,setItemsInCart} = useCart();
     const {state:{encodedToken}} = useAuth();
     const navigate = useNavigate();
+
+    const cardQtyHandler = async (productId, type) => {
+        try {
+          const resp = await axios.post(
+            `/api/user/cart/${productId}`,
+            {
+              action: {
+                type: type,
+              },
+            },
+            { headers: { authorization: encodedToken } }
+          );
+          setItemsInCart(resp.data.cart);
+        } catch (err) {
+          alert(`Error from server",${err}`);
+        }
+      };
   return (
         <div className="card_container">
             <div className="card_wrapper">
@@ -32,7 +49,7 @@ function WishlistCard({item, removeFromWishlistHandler}) {
             </div>
             <div className="btn_container">
             {itemsInCart.some((e)=>e._id === item._id) ? 
-                <Link to="/cartpage"><button className="btn btn-success">Go To Cart</button></Link> : <button className="btn btn-success"
+                <button className="btn btn-success" onClick={()=>cardQtyHandler(item._id,"increment")}>Add To Card</button> :<button className="btn btn-success"
                         onClick={()=>addToCartClickHandler(item , setItemsInCart, encodedToken, navigate)}>Add to Cart</button>}
                  
                  <button className="btn btn-error" onClick={()=>removeFromWishlistHandler(item._id)}>Remove from Wishlist</button>
