@@ -24,7 +24,6 @@ const CartPage = () => {
         },
         { headers: { authorization: encodedToken } }
       );
-      console.log("qty handler se", resp.data.cart);
       setItemsInCart(resp.data.cart);
     } catch (err) {
       console.log(err);
