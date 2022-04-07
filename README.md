@@ -1,3 +1,25 @@
-## E-Commerce Backend
 
-This folder contains the Mock Backend created for E-Commerce App. It contains different API end-points and database configuration for building E-Commerce; so that you can focus on building Frontend.
+# Ecommerce App
+
+Veekay Accessories is an e-commerce app made with ReactJS and JWT
+
+
+
+## Tech Stack
+
+**Client:** `ReactJS`, `CSS`, `JWT`
+
+**Hosting Platform:** `Netlify`
+
+
+## Features
+
+- Home Page
+- Product Listing Page
+- Add To Cart
+- Add TO Wishlist
+- Remove from Cart
+- Increase/Decrease Quantity In Cart
+- Filters
+- Login/SignUp Page
+
