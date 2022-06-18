@@ -1,0 +1,70 @@
+.container_signup {
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "head   head     head"
+        "....   main     ...."
+        "....   main     ...."
+        "....   main     ...."
+        "....   main     ...."
+        "footer footer  footer";
+}
+
+.form_container{
+    border: 1px solid;
+    box-shadow: 3px 0px 9px 0px;
+    width: 25rem;   
+    margin-bottom: 4rem;
+}
+.main_container{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 4rem; */
+    
+}
+.form{ 
+    padding: 1rem; 
+}
+
+.form_header,
+.form_submit_btn{
+    text-align: center;
+}
+
+.login_textbox{
+    margin-left: 0rem;
+    margin-top: 1rem;
+}
+
+.login_list{
+    justify-content: space-between;
+}
+
+.checkbox_list{
+    margin-right: 1rem;
+}
+
+.login_form_link{
+    text-decoration: none;
+}
+
+.forgot_pwd_link{
+    margin-left: 3rem;
+}
+
+.password_input_field{
+    position: relative;
+    display: block;
+}
+.btn_visibility{
+    position: absolute;
+    background-color: white;
+    color: black;
+    bottom:0.1rem;
+    left:18rem;
+    padding: 0;
+}

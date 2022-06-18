@@ -7,6 +7,13 @@ const tokenDetails = localStorage.getItem("token")
 const AuthProvider = ({children}) => {
 const[state,dispatch] = useReducer(authReducerFunction,{
     encodedToken:tokenDetails,
+    user:"",
+    isLoggedIn:!!tokenDetails,
+    firstName:"",
+    lastName:"",
+    email:"",
+    password:"",
+    confirmPassword:""
 })
 
 return(

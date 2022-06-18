@@ -20,6 +20,7 @@ const LoginPage = () => {
     try{
       const password = pass;
       const resp = await axios.post("/api/auth/login",{ email, password})
+      console.log(resp)
       localStorage.setItem("token",resp.data.encodedToken)
       localStorage.setItem("user",JSON.stringify(resp.data.foundUser))
       dispatch({ type: "SUCCESS", payload:resp.data.encodedToken})
@@ -35,6 +36,7 @@ const LoginPage = () => {
       const resp = await axios.post("/api/auth/login",
       { email: "adarshbalika@gmail.com",
         password: "adarshbalika"})
+        console.log(resp)
       localStorage.setItem("token",resp.data.encodedToken)
       localStorage.setItem("user",JSON.stringify(resp.data.foundUser))
       dispatch({ type: "SUCCESS", payload:resp.data.encodedToken})
@@ -88,7 +90,7 @@ const LoginPage = () => {
               <div>
               <button className="btn btn-default" type="submit" onClick={loginDummyClickHandler}>Login with Existing Credentials</button></div>
             <p>
-              <Link to="" className="login_form_link">
+              <Link to="/signup" className="login_form_link">
                 Create an Account
               </Link>
             </p>
